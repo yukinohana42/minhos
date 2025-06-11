@@ -402,7 +402,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 40px auto;
-  background-color: #fff; /* 背景色を追加して他のセクションと区別 */
+  background-color: #fff;
   padding: 40px;
   border-radius: 16px;
   box-sizing: border-box;
@@ -541,25 +541,71 @@ body {
   .container {
     flex-direction: column;
     text-align: center;
-    padding-top: 40px;
+    padding: 60px 20px; /* パディングを調整 */
     gap: 40px;
   }
+
+  /* --- ヒーローセクションの調整 --- */
   .text-column {
-    order: 2;
+    order: 2; /* テキストを画像の下に配置 */
   }
   .visual-column {
-    order: 1;
+    order: 1; /* 画像をテキストの上に配置 */
     width: 100%;
-    margin-bottom: 40px;
+    min-height: 400px; /* スマートフォンでの高さを調整 */
+    margin-bottom: 20px;
   }
   .button-group a {
-    margin-bottom: 10px;
+    margin: 0 5px 10px 5px;
   }
+  .hero-section h1 {
+    font-size: 32px; /* 見出しを少し小さく */
+  }
+  .hero-section p {
+    font-size: 16px; /* 本文を少し小さく */
+  }
+
+  /* --- ヒーロー画像の再配置 --- */
+  .image-1 {
+    width: 60%;
+    height: 220px;
+    top: 5%;
+    right: 5%;
+  }
+  .image-2 {
+    width: 70%;
+    height: 250px;
+    bottom: 5%;
+    left: 5%;
+  }
+  .logo-container {
+    width: 120px; /* ロゴを小さく */
+    height: 120px;
+  }
+  .logo-top-left {
+    top: 20%;
+    left: 15%;
+  }
+  .logo-bottom-right {
+    top: 65%;
+    left: 75%;
+  }
+
+  /* --- その他のセクションの調整 --- */
   .swiper-slide {
     min-width: 80vw;
   }
   .hero-container {
     flex-direction: column;
     height: auto;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .overlay-title {
+    font-size: 1.8rem;
+  }
+  .service-detail h2 {
+    font-size: 1.6rem;
   }
 }
