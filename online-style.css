@@ -1,0 +1,138 @@
+/* indexonline.html のための専用スタイルシート */
+
+/* 基本設定 */
+body {
+  background-color: #f7f9fa; /* 画像が読み込まれるまでの背景色 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  
+  /* ▼▼▼ 背景画像の設定 ▼▼▼ */
+  /* ご自身の画像ファイルへのパスに変更してください */
+  background-image: url('online-images/背景.png'); 
+  
+  /* 画像を画面全体に表示（縦横比は維持） */
+  background-size: cover;
+  
+  /* 画像を繰り返さない */
+  background-repeat: no-repeat;
+
+  /* 画像を中央に配置 */
+  background-position: center center;
+  
+  /* スクロールしても背景画像を固定 */
+  background-attachment: fixed;
+  /* ▲▲▲ 背景画像の設定 ▲▲▲ */
+}
+
+/* ヘッダー */
+.page-header {
+  background-color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+.header-logo .logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.back-link {
+    font-size: 14px;
+    color: #0e71eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+.content-container {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.95); /* 背景画像の上にコンテンツを読みやすくするため、少しだけ半透明の白背景を敷く */
+  border-radius: 16px; /* 元サイトの角丸デザインを継承 */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* 元サイトの影を継承 */
+}
+
+/* 見出しのデザイン */
+.content-container h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.content-container h2 {
+  font-size: 24px;
+  color: #0e71eb; /* 元サイトのキーカラーを使用 */
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eaf6f9;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.content-container h2 .fa-solid {
+    margin-right: 12px;
+}
+
+/* 文章のスタイル */
+.content-container p, .content-container li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* リストのスタイル */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+.feature-list li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 12px;
+}
+.feature-list li::before {
+  content: '\f00c'; /* Font Awesomeのチェックマーク */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #0e71eb;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+/* 参加ボタン */
+.cta-button {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 40px auto 0;
+  padding: 15px;
+  background-color: #0e71eb; /* 元サイトのボタンスタイルを継承 */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.cta-button:hover {
+  background-color: #0c63ce;
+  transform: translateY(-2px);
+}
